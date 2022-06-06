@@ -1,0 +1,222 @@
+### Supplier
+GET http://localhost:5000/suppliers
+
+###
+GET http://localhost:5000/suppliers/629477992c85ab08d673f161
+
+###
+POST http://localhost:5000/suppliers/search
+Content-Type: application/json
+
+{
+    "namaSupplier": "ching"
+}
+
+###
+POST http://localhost:5000/suppliers
+Content-Type: application/json
+
+{
+    "kode": "3",
+    "namaSupplier": "BURU KARIMUN MANDIRI",
+    "alamatSupplier": "",
+    "kota": "",
+    "telp": "",
+    "npwp": ""
+}
+
+###
+PATCH http://localhost:5000/suppliers/629478b73cfce84fe739775c
+Content-Type: application/json
+
+{
+    "kode": "2",
+    "namaSupplier": "A CHING LAU TA",
+    "alamatSupplier": "",
+    "kota": "",
+    "telp": "",
+    "npwp": ""
+}
+
+###
+DELETE http://localhost:5000/suppliers/629478b73cfce84fe739775c
+
+### Group Stok
+GET http://localhost:5000/groupStoks
+
+###
+GET http://localhost:5000/groupStoks/6296dbc8096d3dd09cacc5ae
+
+###
+POST http://localhost:5000/groupStoks
+Content-Type: application/json
+
+{
+    "kode": "ATK",
+    "namaGroup": "ALAT TULIS KANTOR"
+}
+
+###
+PATCH http://localhost:5000/groupStoks/6296dcc941ffabeb9194217d
+Content-Type: application/json
+
+{
+    "kode": "BDK",
+    "namaGroup": "BEDAK"
+}
+
+###
+DELETE http://localhost:5000/groupStoks/6296dcc941ffabeb9194217d
+
+### Stok
+GET http://localhost:5000/stoks
+
+###
+GET http://localhost:5000/stoks/6296dd8f41ffabeb91942185
+
+###
+POST http://localhost:5000/stoks
+Content-Type: application/json
+
+{
+    "gambar": "https://res.cloudinary.com/dbtag5lau/image/upload/v1654052029/luzqpxeolzlrio2quybo.png",
+    "kode": "ACK-002",
+    "namaStok": "PISAU LIPAT TAZAM",
+    "merk": "",
+    "satuanKecil": "KTK",
+    "satuanBesar": "KTK",
+    "konversi": 1,
+    "qty": 0,
+    "hargaJualKecil": 3000,
+    "hargaJualBesar": 2000,
+    "kodeGrup": "ACK"
+}
+
+###
+PATCH http://localhost:5000/stoks/62974221119ea696a03fbcc2
+Content-Type: application/json
+
+{
+    "qty": 5
+}
+
+###
+DELETE http://localhost:5000/stoks/62973859119ea696a03fb1e2
+
+### Pembelian Stok
+GET http://localhost:5000/pembelianStoks
+
+###
+GET http://localhost:5000/pembelianStoks/6297565f789c2935ebc159af
+
+###
+POST http://localhost:5000/pembelianStoks
+Content-Type: application/json
+
+{
+    "nomorNota": "1",
+    "jenis": "KREDIT",
+    "kodeSupplier": "1"
+}
+
+###
+PATCH http://localhost:5000/pembelianStoks/6298118cf620988e2a7f6e45
+Content-Type: application/json
+
+{
+    "total": 0
+}
+
+###
+DELETE http://localhost:5000/pembelianStoks/629810927278c2b69f6f10b3
+
+### A Pembelian Stok 
+GET http://localhost:5000/aPembelianStoks
+
+###
+GET http://localhost:5000/aPembelianStoks/62981e26a614d1083d321f3a
+
+###
+POST http://localhost:5000/aPembelianStoks
+Content-Type: application/json
+
+{
+    "nomorNota": "1",
+    "kodeStok": "ATK-0001",
+    "qty": 1,
+    "hargaSatuan": 10000,
+    "potongan": 10,
+    "subtotal": 9000
+}
+
+###
+PATCH http://localhost:5000/aPembelianStoks/62981e05a614d1083d321f37
+Content-Type: application/json
+
+{
+    "nomorNota": "1",
+    "kodeStok": "ACK-001",
+    "qty": 1,
+    "hargaSatuan": 10000,
+    "potongan": 10,
+    "subtotal": 9000
+}
+
+###
+DELETE http://localhost:5000/aPembelianStoks/629a0147e299c3b7f9b744d2
+
+### Penjualan Stok 
+GET http://localhost:5000/penjualanStoks
+
+###
+GET http://localhost:5000/penjualanStoks/629ac2b398df9f51e8ddb93b
+
+###
+POST http://localhost:5000/penjualanStoks
+Content-Type: application/json
+
+{
+    "nomorNota": "2",
+    "jenis": "KREDIT"
+}
+
+###
+PATCH http://localhost:5000/penjualanStoks/629ac2a598df9f51e8ddb939
+Content-Type: application/json
+
+{
+    "jenis": "KREDIT"
+}
+
+###
+DELETE http://localhost:5000/penjualanStoks/629ac2b398df9f51e8ddb93b
+
+### A Penjualan Stok 
+GET http://localhost:5000/aPenjualanStoks
+
+###
+GET http://localhost:5000/aPenjualanStoks/629ac4af4b46b30bf90f2f9b
+
+###
+POST http://localhost:5000/aPenjualanStoks
+Content-Type: application/json
+
+{
+    "nomorNota": "1",
+    "kodeStok": "ACK-001",
+    "qty": 1,
+    "hargaSatuan": 10000,
+    "potongan": 10,
+    "subtotal": 9000
+}
+
+###
+PATCH http://localhost:5000/aPenjualanStoks/629ac4af4b46b30bf90f2f9b
+Content-Type: application/json
+
+{
+    "qty": 0
+}
+
+###
+DELETE http://localhost:5000/aPenjualanStoks/629ac4af4b46b30bf90f2f9b
