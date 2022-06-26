@@ -55,9 +55,9 @@ export const updateStok = async(req, res) => {
 export const deleteStok = async(req, res) => {
     try {
         const stok = await Stok.findById(req.params.id);
-        await cloudinary.v2.uploader.destroy(`${stok.gambarId}`, function(error,result) {
+        {stok.gambarId && await cloudinary.v2.uploader.destroy(`${stok.gambarId}`, function(error,result) {
             console.log(result, error) 
-        });
+        })}
         const deletedStok = await Stok.deleteOne({ _id: req.params.id });
         // Status 200 = Successful
         res.status(200).json(deletedStok);
