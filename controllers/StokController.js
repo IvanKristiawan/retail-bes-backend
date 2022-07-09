@@ -44,6 +44,11 @@ export const saveStok = async(req, res) => {
 export const updateStok = async(req, res) => {
     try {
         const updatedStok = await Stok.updateOne({ _id: req.params.id }, { $set: req.body });
+        if (req.body.deleteGambarId) {
+            for (let filename of req.body.deleteGambarId) {
+                await cloudinary.v2.uploader.destroy(filename)
+            }
+        }
         // Status 200 = Successful
         res.status(200).json(updatedStok);
     } catch (error) {
@@ -55,9 +60,11 @@ export const updateStok = async(req, res) => {
 export const deleteStok = async(req, res) => {
     try {
         const stok = await Stok.findById(req.params.id);
-        {stok.gambarId && await cloudinary.v2.uploader.destroy(`${stok.gambarId}`, function(error,result) {
-            console.log(result, error) 
-        })}
+        for (let i = 0; i < stok.gambarId.length; i++) {
+            await cloudinary.v2.uploader.destroy(`${stok.gambarId[i]}`, function(error,result) {
+                console.log(result, error) 
+            })
+        }
         const deletedStok = await Stok.deleteOne({ _id: req.params.id });
         // Status 200 = Successful
         res.status(200).json(deletedStok);

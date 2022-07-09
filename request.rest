@@ -72,14 +72,15 @@ DELETE http://localhost:5000/groupStoks/6296dcc941ffabeb9194217d
 GET http://localhost:5000/stoks
 
 ###
-GET http://localhost:5000/stoks/6296dd8f41ffabeb91942185
+GET http://localhost:5000/stoks/62c7d89224972a7002d8bdad
 
 ###
 POST http://localhost:5000/stoks
 Content-Type: application/json
 
 {
-    "gambar": "https://res.cloudinary.com/dbtag5lau/image/upload/v1654052029/luzqpxeolzlrio2quybo.png",
+    "gambarId": ["vbcdsmj3ddm7z3rwbifk", "oaoa22xcxmyicexdulel"],
+    "gambar": ["https://res.cloudinary.com/dbtag5lau/image/upload/v1657178663/vbcdsmj3ddm7z3rwbifk.jpg", "https://res.cloudinary.com/dbtag5lau/image/upload/v1655273207/oaoa22xcxmyicexdulel.jpg"],
     "kode": "ACK-002",
     "namaStok": "PISAU LIPAT TAZAM",
     "merk": "",
@@ -97,11 +98,13 @@ PATCH http://localhost:5000/stoks/62974221119ea696a03fbcc2
 Content-Type: application/json
 
 {
-    "qty": 5
+    "qty": 0,
+    "deleteGambarId": ["o1ywrsb6me6qrzagb3ca"],
+    "deleteGambar": ["http://res.cloudinary.com/dbtag5lau/image/upload/v1657268903/o1ywrsb6me6qrzagb3ca.jpg"]
 }
 
 ###
-DELETE http://localhost:5000/stoks/62973859119ea696a03fb1e2
+DELETE http://localhost:5000/stoks/62c7b1f2dbcd8463a15aa6b4
 
 ### Pembelian Stok
 GET http://localhost:5000/pembelianStoks

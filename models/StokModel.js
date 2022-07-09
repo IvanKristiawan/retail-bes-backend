@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const StokSchema = new mongoose.Schema({
-    gambarId: {type: String},
-    gambar: {type: String},
+    gambarId: [String],
+    gambar: [String],
     kode: {type: String},
     namaStok: {type: String},
     merk: {type: String},
