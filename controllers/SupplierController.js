@@ -60,9 +60,12 @@ export const saveSupplier = async (req, res) => {
 
 export const updateSupplier = async (req, res) => {
   try {
-    const updatedSupplier = await Supplier.updateOne(
-      { _id: req.params.id },
-      { $set: req.body }
+    const updatedSupplier = await Supplier.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: req.body,
+      },
+      { new: true }
     );
     // Status 200 = Successful
     res.status(200).json(updatedSupplier);

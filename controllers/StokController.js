@@ -82,9 +82,12 @@ export const saveStok = async (req, res) => {
 
 export const updateStok = async (req, res) => {
   try {
-    const updatedStok = await Stok.updateOne(
-      { _id: req.params.id },
-      { $set: req.body }
+    const updatedStok = await Stok.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: req.body,
+      },
+      { new: true }
     );
     if (req.body.deleteGambarId) {
       for (let filename of req.body.deleteGambarId) {

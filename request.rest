@@ -15,8 +15,8 @@ POST http://localhost:5000/suppliers
 Content-Type: application/json
 
 {
-    "kode": "3",
-    "namaSupplier": "BURU KARIMUN MANDIRI",
+    "kode": "99",
+    "namaSupplier": "TEST",
     "alamatSupplier": "",
     "kota": "",
     "telp": "",
@@ -24,12 +24,12 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:5000/suppliers/629478b73cfce84fe739775c
+PATCH http://localhost:5000/suppliers/62dbe4fa7f43467825304b46
 Content-Type: application/json
 
 {
-    "kode": "2",
-    "namaSupplier": "A CHING LAU TA",
+    "kode": "99",
+    "namaSupplier": "TEST3",
     "alamatSupplier": "",
     "kota": "",
     "telp": "",
@@ -50,12 +50,12 @@ POST http://localhost:5000/groupStoks
 Content-Type: application/json
 
 {
-    "kode": "ATK",
-    "namaGroup": "ALAT TULIS KANTOR"
+    "kode": "999",
+    "namaGroup": "TEST"
 }
 
 ###
-PATCH http://localhost:5000/groupStoks/6296dcc941ffabeb9194217d
+PATCH http://localhost:5000/groupStoks/62dbe6af1be9b09638b83c0b
 Content-Type: application/json
 
 {
@@ -88,8 +88,8 @@ Content-Type: application/json
 {
     "gambarId": ["vbcdsmj3ddm7z3rwbifk", "oaoa22xcxmyicexdulel"],
     "gambar": ["https://res.cloudinary.com/dbtag5lau/image/upload/v1657178663/vbcdsmj3ddm7z3rwbifk.jpg", "https://res.cloudinary.com/dbtag5lau/image/upload/v1655273207/oaoa22xcxmyicexdulel.jpg"],
-    "kode": "ACK-002",
-    "namaStok": "PISAU LIPAT TAZAM",
+    "kode": "999",
+    "namaStok": "TEST",
     "merk": "",
     "satuanKecil": "KTK",
     "satuanBesar": "KTK",
@@ -101,13 +101,15 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:5000/stoks/62974221119ea696a03fbcc2
+PATCH http://localhost:5000/stoks/62dbe71431ebc6933b728743
 Content-Type: application/json
 
 {
-    "qty": 0,
-    "deleteGambarId": ["o1ywrsb6me6qrzagb3ca"],
-    "deleteGambar": ["http://res.cloudinary.com/dbtag5lau/image/upload/v1657268903/o1ywrsb6me6qrzagb3ca.jpg"]
+    "kode": "999",
+    "namaStok": "TEST",
+    "merk": "",
+    "satuanKecil": "KTK",
+    "satuanBesar": "KTK",
 }
 
 ###
@@ -124,13 +126,13 @@ POST http://localhost:5000/pembelianStoks
 Content-Type: application/json
 
 {
-    "nomorNota": "1",
+    "nomorNota": "99",
     "jenis": "KREDIT",
     "kodeSupplier": "1"
 }
 
 ###
-PATCH http://localhost:5000/pembelianStoks/6298118cf620988e2a7f6e45
+PATCH http://localhost:5000/pembelianStoks/62dbe7b82b37af0dfe005995
 Content-Type: application/json
 
 {
