@@ -1,16 +1,14 @@
 ### Supplier
 GET http://localhost:5000/suppliers
 
+### 
+GET http://localhost:5000/supplierForTable
+
+### 
+GET http://localhost:5000/supplierMainInfo
+
 ###
 GET http://localhost:5000/suppliers/629477992c85ab08d673f161
-
-###
-POST http://localhost:5000/suppliers/search
-Content-Type: application/json
-
-{
-    "namaSupplier": "ching"
-}
 
 ###
 POST http://localhost:5000/suppliers
@@ -70,6 +68,15 @@ DELETE http://localhost:5000/groupStoks/6296dcc941ffabeb9194217d
 
 ### Stok
 GET http://localhost:5000/stoks
+
+### 
+GET http://localhost:5000/stokForTable
+
+### 
+GET http://localhost:5000/stokMainInfo
+
+### 
+GET http://localhost:5000/stokForTransaction
 
 ###
 GET http://localhost:5000/stoks/62c7d89224972a7002d8bdad
